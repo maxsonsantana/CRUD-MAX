@@ -1,0 +1,34 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/agenda" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{agenda._id}}">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Nome" value="{{agenda.fullName}}">
+        <div class="text-danger"> {{agenda.fullNameError}} </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="E-mail" value="{{agenda.email}}">
+        <div class="text-danger"> {{agenda.emailError}} </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Telefone</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Telefone" value="{{agenda.mobile}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Endereço</label>
+            <input type="text" class="form-control" name="city" placeholder="Endereço" value="{{agenda.city}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">        
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Enviar</button>
+        </div>
+        <div class="form-group col-md-6">  
+            <a class="btn btn-secondary" href="/agenda/list"><i class="fa fa-list-alt"></i>Visualizar todos</a>
+        </div>
+    </div>
+</form>
+
